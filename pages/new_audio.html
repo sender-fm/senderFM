@@ -1,0 +1,105 @@
+<div class="block">
+<div  >maximal 300 MB, Formate: ("<b>mp3</b>", "<b>ogg</b>",   "<b>m4a</b>")</div>
+    <input id="_file" class="hidden" name="file" type="file"  accept=".mp3,.ogg,.m4a" />
+    <button id="input_file_event"  
+            class="col button button-big button-raised button-fill" 
+            onclick="$$('#_file').click()" >neues Audio</button>
+
+</div>   
+   
+
+
+    
+    <div class="col-100 hidden hiddenform">
+                 
+        <div class="block" id="uppy_vorschau"  ></div>
+        <div class="block" id="_vorschauplayer"  ></div>
+        <div class="block" id="_duration"  >
+            <div id="backduration"></div>
+            <div class="card-footer">
+                <a href="#" class="color-white"  id="_durationLive">0</a>
+                <a href="#" class="color-white"  id="_durationTotal" >0</a>
+            </div>
+        </div>  
+        
+        <div class="row" >
+            <div class="col">Format</div>
+            <div class="col pre_format">...</div>
+        </div>
+        <div class="row" >
+            <div class="col">Grösse</div>
+            <div class="col pre_size">...</div>
+        </div>
+        <div class="row" >
+            <div class="col">Zeit</div>
+            <div class="col pre_time">...</div>
+        </div>
+        <div class="row" >
+            
+            <div class="col-100">
+             
+                
+                      <div class="list no-hairlines-md">
+  <ul>
+    <li class="item-content item-input item-input-with-info">
+      <div class="item-inner">
+          <div class="item-title item-label">Titel</div>
+        <div class="item-input-wrap">
+          <input id="_title" type="text" name="name" placeholder="">
+          <span class="input-clear-button"></span>
+           
+        </div>
+      </div>
+    </li>
+    
+    <li class="item-content item-input item-input-with-info">
+      <div class="item-inner">
+          <div class="item-title item-label">Text / Beschreibung</div>
+          <br>
+        <div class="item-input-wrap">
+           <div id="_subtitle" class="senderfm_editor"></div>
+          <span class="input-clear-button"></span>
+           
+        </div>
+      </div>
+    </li>
+    </ul>
+    </div>
+                
+               
+           
+              
+                </div>
+                
+                <div class="col-100 bg-color-yellow">
+                
+                <small>Vorschau:</small>
+                <p class="vorschauEditor"></p>
+              
+                </div>
+        </div>
+        
+  
+   
+      
+    </div>  
+    
+    <div class="col-100 hidden hiddenform">                     
+        <div class="block">
+            <div class="row">
+                <button class="col button button-big button-raised">abrechen</button>
+                <button id="save_mp3"  class="col button button-big button-raised button-fill">speichern</button>
+            </div>                
+            <div class="block">
+                <div id="filename"></div>
+                <div id="progress"></div>
+                <div id="progressBar"></div>
+            </div>
+        </div>            
+    </div>              
+
+ 
+
+ 
+
+

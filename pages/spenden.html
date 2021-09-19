@@ -1,0 +1,98 @@
+<div class="page" data-name="spenden">
+     <div class="navbar elevation-7 ">                     
+                        <div class="row ">
+                             <a class="col-20 left_ text-align-left" href="/" style="margin-top: -10px;padding-left: 10px"> <img src="images/site/logoT120_trans.png" height="80" width="80" > </a >
+                            <a class="col-50 center_ link "></a>
+                            <a class="col-30 right_ link"></a>
+                        </div>   
+
+                    </div>
+    <div class="page-content">
+        <div id="siteText_spenden" class="block-strong text-align-center">
+           
+            Deine Spende wird dafür verwendet um den Betrieb und ausbau von sender.fm zu garantieren. 
+            Wir danken Euch herzlich für jede Unterstützung.
+        </div>
+        
+        
+      
+            <div class="block block-strong text-align-center">
+                 
+                
+                <div class="row">
+                    <div class="col">
+                        <div class="stepper stepper-fill stepper-init" data-wraps="true" data-autorepeat="true" data-autorepeat-dynamic="true" data-decimal-point="2" data-manual-input-mode="true">
+                            <div id="spende_minus" class="stepper-button-minus"></div>
+                            <div class="stepper-input-wrap">
+                                
+                                <input id="spenden_input" type="text" value="3" min="5" max="10000" step="1"> 
+                            </div>
+                            
+                          
+                            <div class="stepper-button"><i class="fa fa-eur fa-3x" aria-hidden="true"></i></div>
+                              <div class="stepper-button"> </div>
+                            <div id="spende_plus" class="stepper-button-plus"></div>
+                             <div class="stepper-button"> <i class="fa fa-heart fa-2x" aria-hidden="true"></i></div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+       
+       
+           
+       <form action="https://www.paypal.com/cgi-bin/webscr" 
+             method="post" class="paypal" 
+             id="paypal_form" 
+             accept-charset="utf-8" >        
+           <p>            
+               <input type="hidden" name="cmd" value="_donations">            
+               <input type="hidden" name="charset" value="utf-8">            
+               <input type="hidden" name="no_shipping" value="1">            
+               <input type="hidden" name="business" value="spenden@sender.fm">            
+               <input type="hidden" name="image_url" value="https://www.sender.fm/m/images/site/_150x150.png">           
+               <input type="hidden" name="item_name" id="paypalText" value="Spende an sender.fm">            
+               <input type="hidden" name="item_number" value="1">            
+               <input type="hidden" name="amount" value="3.00" id="amount">            
+               <input type="hidden" name="currency_code" value="EUR">            
+               <input type="hidden" name="custom" value="1">            
+               <input type="hidden" name="lc" value="de_DE">            
+               <input type="hidden" name="bn" value="DesignerFotos_BuyNow_WPS_DE">            
+               <input type="hidden" name="return" value="https://www.sender.fm/m/php/payment-successful.php">            
+               <input type="hidden" name="rm" value="2">            
+               <input type="hidden" name="cancel_return" value="https://www.sender.fm/m/php/payment-cancelled.php">            
+               <input type="hidden" name="notify_url" value="https://www.sender.fm/m/php/payment-successful.php">            
+           </p>
+           <center>                
+           <input type="image" src="https://www.paypalobjects.com/de_DE/i/btn/btn_donate_LG.gif" name="spenden" alt="Spenden">  
+           </center>        
+           <p>
+           </p>    
+       </form>    
+      
+    
+           <div class="block">
+               
+                
+               <div id="donate-count size-20">
+                    
+                       
+               </div>
+               
+
+               <div class="list media-list">
+                   <div>Die letzten Spenden waren.  </div>
+
+                   <ul id="donate-last">
+                    
+                           
+                  </ul>
+                </div>
+               
+        </div>        
+                    
+       
+      
+  </div>
+</div>

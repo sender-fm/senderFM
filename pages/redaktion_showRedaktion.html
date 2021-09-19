@@ -1,0 +1,177 @@
+ 
+<div class="page toolbar-fixed navbar-fixed" data-name="redaktion_showRedaktion">
+    <div class="navbar elevation-7 ">                     
+        <div class="row ">
+            <a class="col-20 left_ text-align-left" href="/" style="margin-top: -10px;padding-left: 10px"> 
+                <img src="images/site/logoT120_trans.png" height="80" width="80" > </a >
+            <a class="col-50 center_ link "></a>
+            <a class="col-30 right_ link"></a>
+        </div>   
+        
+    </div>   
+  
+    <div class="page-content hide-navbar-on-scroll">
+      <hr>
+           <div class="row">
+          <a href="#" class="col tab-link tab-link-active button button-small color-red" data-tab="#tab1-r">Start</a>
+ 
+  <a href="#" class="col tab-link button button-small " data-tab="#tab2-r">Archiv</a>
+ 
+  <a href="#" class="col tab-link button button-small " data-tab="#tab3-r">Mitglieder</a>
+        
+  <a href="#" class="col tab-link button button-small " data-tab="#tab4-r">Einstellung</a>
+        </div> 
+
+        <hr>
+        <div class="tabs">
+            <div class="tab tab-active" id="tab1-r">
+           
+              <!--  <img id="redaktion_img"  data-src="" width="100%" height="100px" class="lazy"  /> -->
+                     
+                <div class="block">
+                    <div class="row">
+                
+                        <div class="col-100">
+                                                   
+                                <p><b id="redaktion_name"> </b></p>
+                                <p id="redaktion_des"> </p>                      
+                           
+                        </div>
+                        <div class="col-100 row" >                                                     
+                            
+                                <button class="col button button-raised   right" id="newBeitragRedaktion">+ Beitrag</button>
+                            
+                         
+                                <button class="col button   button-raised    right" id="newMP3_Redaktion">+ Audio</button>
+                                <button class="col button   button-raised    right" id="chat_Redaktion">Chat</button>
+                        </div>
+                    </div>
+                </div>
+                        <hr>
+                         
+                <div class="block">
+                    <div class="row">
+                 
+                        <div class="col-100">                             
+                            <div class="block  ">                         
+                                <div id="content_box"> </div>                        
+                            </div>
+                        </div>                            
+                       <!--
+                        <div class="tablet-100 desktop-40">                        
+                            <div id="audio_box"> audio box</div>
+                        </div>
+                        -->
+                    </div>
+                </div>
+          
+            </div>
+           
+            
+            <div class="tab" id="tab2-r">
+                <div class="block">
+                    <p>Archiv</p>
+                </div>
+                <div class="block filterselect hidden">
+         <div class="row">
+             <div class="col-10">
+                 <span> <i class="fa fa-filter fa-2x" aria-hidden="true"></i> </span>
+             </div>
+             <div class="col-90">
+                 <a class="item-link smart-select smart-select-init" data-open-in="popover">
+                     <select class="archiv_file_select" name="superhero" multiple>
+ 
+                         <option value="Audio" selected>Audio</option>
+                         <option value="Video" selected>Video</option>
+                         <option value="Bild" selected>Bild</option>
+                         <option value="Document" selected>Document</option>
+    
+                     </select>
+                     <button class="button col  button-fill text-color-white">
+                    
+                         <div class="item-content">                 
+                             <div class="item-inner">                     
+                                 <div class="item-title"></div>
+                             </div>
+                 
+                         </div>
+                      
+                     </button>
+                 </a>
+             </div>
+         </div>
+   
+        
+      </div>
+      <div class="block">
+            <div class="list">
+                <ul id="archiv-filelist">
+    
+                </ul>
+          </div>
+      </div>
+            </div>
+            <div class="tab" id="tab3-r">
+          
+           
+                       
+                        <form class="searchbar">
+                            <div class="searchbar-inner">
+                                <div class="searchbar-input-wrap">
+                                    <input type="search" placeholder="Search">
+                                    <i class="searchbar-icon"></i>
+                                    <span class="input-clear-button"></span>
+                                </div>
+                                <span class="searchbar-disable-button">schließen</span>
+                            </div>
+                        </form>
+                  
+           
+                
+                 
+     
+        <div class="searchbar-backdrop"></div>
+        
+        <div class="block searchbar-hide-on-search">
+       
+        </div>
+         <div class="block">
+        <div class="list searchbar-found">
+            <h3>Mitglieder</h3>
+            <ul id="mitglieder_redaktion_box_ul" style="background-color: aliceblue;">
+        
+            </ul>
+        </div> 
+               
+        <div class="list searchbar-found">
+              <h3>keine Mitglieder</h3>
+            <ul id="NOT_mitglieder_box_ul_r">
+        
+            </ul>
+        </div>
+      
+        <div class="block searchbar-not-found">
+            <div class="block-inner">kein Eintrag gefunden</div>
+        </div>
+     </div>
+                
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+            
+            <div class="tab" id="tab4-r">
+                <div class="block">
+                    <p>Einstellungen</p>
+               
+
+                </div>
+            </div>   
+        </div>
+        
+    
+      
+    </div>
+</div>
+ 
