@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="default">
+      <meta name="theme-color" content="#2196f3">
+      <meta name="format-detection" content="telephone=no">
+      <meta name="msapplication-tap-highlight" content="no">
+      <title>senderfm passwort ändern</title>
+      <link rel="stylesheet" href="../framework7/css/framework7.min.css">
+      <link rel="stylesheet" href="../fonts/font-awesome/css/font-awesome.min.css">
+      <link rel="stylesheet" href="../css/app.css">
+      <link href="../css/uppy.min.css" rel="stylesheet">
+      <link href="../css/quill.snow.css" rel="stylesheet">
+   </head>
+   <body>
+      <div id="app">
+         <div class="statusbar"></div>
+         <div class="view view-main view-init">
+            <div class="page" data-name="pwdc">
+               <div class="navbar elevation-7 ">
+                  <div class="row ">
+                     <a class="col-20 left_ text-align-left" href="/" style="margin-top: -10px;padding-left: 10px"> <img src="../images/site/logoT120_trans.png" height="80" width="80" > </a >                           
+                     <a class="col-50 center_ link ">Passwort ändern</a>
+                     <a class="col-30 right_ link"></a>
+                  </div>
+               </div>
+               <div class="page-content" >
+                  <div class="block">
+                     <div class="list no-hairlines-md">
+                        <form>
+                           <ul>
+                              <li class="item-content item-input item-input-with-info">
+                                 <div class="item-inner">
+                                    <div class="item-title item-label">neues Passwort</div>
+                                    <div class="item-input-wrap">
+                                       <input id="pwd1" type="password" placeholder="neues Passwort" autocomplete="false"  required validate>
+                                       <span class="input-clear-button"></span>
+                                       <div class="item-input-info">8 zeichen minimum</div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li class="item-content item-input item-input-with-info">
+                                 <div class="item-inner">
+                                    <div class="item-title item-label">wiederhole Passwort</div>
+                                    <div class="item-input-wrap">
+                                       <input id="pwd2" type="password" placeholder="Dein Passwort" autocomplete="false"  required validate>
+                                       <span class="input-clear-button"></span>
+                                    </div>
+                                 </div>
+                              </li>
+                           </ul>
+                        </form>
+                     </div>
+                     <div class="block">
+                        <div class="row">
+                           <button class="col button button-outline button-round speichern">speichern</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <script src="../js/sha512.js"></script>
+            <script src="../framework7/js/framework7.min.js"></script>
+            <script src="../js/jquery_3_0_0.js"></script>
+            <script src="../js/howler.js"></script>
+            <script src="../js/routes.js"></script>
+            <script src="../js/app.min.js"></script> 
+            <script>
+               var $$ = Dom7;
+               
+                              
+               var param = document.URL.split("code=");
+                
+               app.request.post('../php/action_login_pwd_change_check.php', {code: param[1] },  function(data) {
+                   var erg = data.split("-");
+                   if ( erg[0] == "OK"  ) {   
+                       
+                       app.dialog.alert('OK - Du kannst jetzt dein Passwort ändern!');
+                       
+                       $$(".speichern").on("click", function(){
+       
+                           if($$("#pwd1").val() == ""  ) {
+                               app.dialog.alert("Bitte ein Passwort eintragen!");
+                               $$("#pwd1").focus;
+                           } else if( $$("#pwd1").val().length <= 5){
+                                   app.dialog.alert("Bitte längers Passwort (min. 6 Zeichen) verwenden!");
+                               $$("#pwd1").focus;
+                           } else if($$("#pwd2").val() == ""  ) {
+                               app.dialog.alert("Bitte das Passwort wiederholen!");
+                               $$("#pwd2").focus;
+                           }  
+               
+                           if(SHA512($$("#pwd1").val()) != SHA512($$("#pwd2").val()) ) {
+                               app.dialog.alert("Passörter sind nicht gleich!");
+                           } else {
+                               var id = erg[1];
+                               app.request.post('../php/action_login_pwd_change_save.php', {id:id, pwd_new: SHA512($$("#pwd1").val()) , pwd_new2: SHA512($$("#pwd2").val()) },  function(data) {
+                                   window.location.href = "/";
+                               });
+                           }
+                       });
+                       
+                   }   else {
+                       app.dialog.alert("Dieser Code ist nicht mehr Gültig!");
+                       setTimeout(function(){
+                       window.location.href = "/";    
+                       },3000)
+                   }
+               });
+            </script>
+         </div>
+      </div>
+   </body>
+</html>

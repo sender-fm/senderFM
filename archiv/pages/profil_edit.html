@@ -1,0 +1,140 @@
+<div class="page toolbar-fixed navbar-fixed" data-name="profil-edit">
+    <div class="navbar">
+        <div class="navbar-inner sliding">
+             <div class="left">
+                <a class="link back">
+            <i class="icon icon-back"></i>
+            <span class="ios-only">Back</span>
+          </a>
+            </div>
+            <div class="title">Einstellung</div>
+            <div class="right"></div>
+        </div>
+    </div>
+    
+  
+    
+    <div class="page-content">
+        
+         <div class="block">
+             <div id="showProfilAlsUser" class="block-title text-color-green ">Profil ansehen wie es andere User sehen.</div>
+        </div>
+         
+        <div class="block">
+                <div class="block-title text-color-blue">Profildaten bearbeiten</div>
+            <form class="list form-store-data" id="my-form">
+                <ul>
+                    <li>
+                        <div class="item-content item-input">
+                            <div class="item-inner">
+                                <div class="item-title item-label">Vorname</div>
+                                <div class="item-input-wrap">
+                                    <input id="u-edit-vorname" type="text" name="vorname" placeholder=" ">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content item-input">
+                            <div class="item-inner">
+                                <div class="item-title item-label">Nachname</div>
+                                <div class="item-input-wrap">
+                                    <input id="u-edit-nachname" type="text" name="nachname" placeholder=" ">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                 
+                    <li>
+                        <div class="item-content item-input">
+                            <div class="item-inner">
+                                <div class="item-title item-label">Beschreibung</div>
+                                <div class="item-input-wrap">
+                                    <textarea id="u-edit-text" class="no-store-data" ></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                
+                    <li>
+                        <div class="item-content item-input">
+                            <div class="item-inner">
+                                <div class="item-title item-label">Postleitzahl</div>
+                                <div class="item-input-wrap">
+                                    <input id="u-edit-plz" class="no-store-data" type="text" name="plz" placeholder=" ">
+                                </div>
+                            </div>
+                        </div>
+                    </li> 
+                    <li>
+                        <div class="item-content item-input">
+                            <div class="item-inner">
+                                <div class="item-title item-label">Ort</div>
+                                <div class="item-input-wrap">
+                                    <input id="u-edit-ort" class="no-store-data" type="text" name="ort" placeholder=" ">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                    <li>
+                        <div class="item-content item-input">
+                            <div class="item-inner">
+                                <div class="item-title item-label">Webseite</div>
+                                <div class="item-input-wrap">
+                                    <input id="u-edit-www" class="no-store-data" type="text" name="www" value=""  >
+                                </div>
+                                
+                                    
+                                      <div class="chip chip-outline color-orange">
+                                        <div onclick="$$('#u-edit-www').val($$(this).html())" class="chip-label">https://</div>
+                                      </div>
+                                      <div class="chip chip-outline color-orange">
+                                        <div onclick="$$('#u-edit-www').val($$(this).html())" class="chip-label">https://www.</div>
+                                      </div>
+                                      <div class="chip chip-outline color-orange">
+                                        <div onclick="$$('#u-edit-www').val($$(this).html())" class="chip-label">http://</div>
+                                      </div>
+                                      <div class="chip chip-outline color-orange">
+                                        <div onclick="$$('#u-edit-www').val($$(this).html())" class="chip-label">http://www.</div>
+                                      </div>
+                                      
+                                   
+                            </div>
+                        </div>
+                    </li>
+                   
+                </ul>
+                <br>
+    
+               
+            </form>
+                    
+        </div>
+        <div class="block">
+     
+            <p class="row">
+                <button id="save_profil_edit" class="col button button-big button-raised button-fill">Änderung speichern</button>
+            </p>
+             <hr> 
+             <p class="row">
+                <button id="userimg_edit"  class="col button button-big button-raised">Profilbild ändern</button>
+            </p>
+             <p class="row">
+                <button id="pwd_edit"  class="col button button-big button-raised">Passwort ändern</button>
+            </p>
+            <hr> 
+                <div class="block-title text-color-red">Profil löschen</div>
+            <p class="row">
+                <button id="save_profil_delete"  class="col button button-big button-raised color-red">Profil löschen</button>
+            </p>
+        </div>
+    
+               
+</div>
+    
+       
+   
+    
+ 
+ 
